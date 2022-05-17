@@ -13,7 +13,7 @@ app.get('/api/pets', (req, res) => {
         if (err) {
             res.status(404).send("Not found");
         }
-        res.status(200).send(petsJson);
+        res.status(200).send(JSON.parse(petsJson));
     });
 })
 
